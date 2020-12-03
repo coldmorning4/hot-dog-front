@@ -1,4 +1,5 @@
 {
+  "homepage": "https://coldmorning4.github.io/hot-dog-front/",
   "name": "test-task-react",
   "version": "0.1.0",
   "private": true,
@@ -33,7 +34,9 @@
     "migrate_down": "db-migrate down -c --config ./config/products_config.json",
     "migrate_up": "db-migrate up -c --config. /config/products_config.json",
     "migrate_up_all": "db-migrate up --config ./config/products_config.json",
-    "server": "server/index.js"
+    "server": "server/index.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "react-modal": "^3.12.1",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
